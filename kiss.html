@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>FORM</title>
+    
+</head>
+<body>
+
+    <div class="container">
+    <div id="form">
+        <table>
+            <tr>
+                <td>NAME:</td>
+                <td><input type="text" name="name" id="inputname" placeholder="Enter name"/></td>
+                <td>EMAIL:</td>
+                <td><input type="email" name="email" id="inputemail" placeholder="Enter email"/></td>
+            </tr>
+        </table>
+      
+      
+      <button onclick="f()" type="button" id="submitbutton">let's go</button>
+    </div>
+</div>
+    
+
+    <script type="text/javascript"> 
+    var i=0;       
+        function f() {
+            let container = document.querySelector('.container');
+            var namevar = document.getElementById("inputname").value;
+            var emailvar = document.getElementById("inputemail").value;
+            
+            i=i+1;
+            let myDiv = document.createElement("div");
+            myDiv.innerHTML =i+' '+ namevar+' : '+emailvar;
+            container.appendChild(myDiv);
+        }
+
+    </script>
+    
+
+</body>
+</html>
